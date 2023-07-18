@@ -1,4 +1,0 @@
-if CMD=$(which virtualenvwrapper.sh 2>/dev/null); then
-    source "$CMD"
-fi
-unset CMD

@@ -1,0 +1,5 @@
+[user]
+	name = Chase Abrahams
+	email = chase.abrahams@shareforce.co.za
+[alias]
+	l = log --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr)'

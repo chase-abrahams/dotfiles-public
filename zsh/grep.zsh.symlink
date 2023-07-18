@@ -1,2 +1,0 @@
-unset GREP_OPTIONS
-alias grep='grep --color=auto'

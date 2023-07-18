@@ -1,3 +1,0 @@
-if [ -d /usr/share/doc/python/html ]; then
-    export PYTHONDOCS=/usr/share/doc/python/html/
-fi
