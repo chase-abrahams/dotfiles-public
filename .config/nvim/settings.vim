@@ -61,4 +61,4 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 cmap w!! w !sudo tee %
 
 " Add template paths (very specific to repo)
-set path+=~/code/shareforce/shareforce/templates,~/code/shareforce/custom/templates
+set path+=~/code/shareforce/shareforce/templates,~/code/shareforce/custom/templates,$VIRTUAL_ENV/lib/python3.10/site-packages/django/contrib/admin/templates

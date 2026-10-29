@@ -1,0 +1,18 @@
+---
+name: shareforce-fix
+project_root: "/home/chase/code/shareforce-fix"
+on_project_first_start: docker compose up -d
+on_project_stop: docker compose down
+startup_window: nvim
+windows:
+- containers:
+    layout: main-vertical
+    panes:
+    - docker compose logs -f app
+    - docker compose logs -f celery
+- nvim:
+    panes:
+    - pipenv run nvim
+- app:
+    panes:
+    - docker compose exec app bash

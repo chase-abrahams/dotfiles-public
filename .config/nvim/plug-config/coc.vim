@@ -1,4 +1,4 @@
-let g:coc_node_path = '/home/chase/.nvm/versions/node/v14.15.5/bin/node'
+let g:coc_node_path = '/usr/bin/node'
 
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -15,7 +15,7 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-emoji',
   \ 'coc-cssmodules',
-  \ 'coc-python',
+  \ 'coc-jedi',
   \ 'coc-pyright',
   \ 'coc-explorer',
   \ 'coc-svg',

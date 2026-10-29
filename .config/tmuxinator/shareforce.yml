@@ -1,0 +1,18 @@
+---
+name: shareforce
+project_root: "/home/chase/code/shareforce"
+on_project_first_start: docker compose up -d mailhog app celery
+on_project_stop: docker compose down
+startup_window: nvim
+windows:
+- containers:
+    layout: main-vertical
+    panes:
+    - docker compose logs -f app
+    - docker compose logs -f celery
+- nvim:
+    panes:
+    - uv run nvim
+- app:
+    panes:
+    - docker compose exec app uv run bash

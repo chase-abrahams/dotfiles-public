@@ -6,7 +6,7 @@ fun! RunTestInFile()
   let file = substitute(substitute(bufname("%"), "/", ".", "g"), "\.py", "", "")
   let cmd_string = "./manage.py test --keepdb " . file
   call setreg('a', cmd_string)
-  exec "sp | terminal! docker-compose exec app bash"
+  exec "sp | terminal! docker-compose exec app uv run bash"
   call feedkeys(cmd_string)
 endfun
 
@@ -18,7 +18,7 @@ fun! RunTestUnderCursor()
   let class = "." . getreg('"')
   let cmd_string = "./manage.py test --keepdb " . file . class . function
   call setreg('a', cmd_string)
-  exec "sp | terminal! docker-compose exec app bash"
+  exec "sp | terminal! docker-compose exec app uv run bash"
   call feedkeys(cmd_string)
 endfun
 
@@ -44,7 +44,7 @@ endfun
 command! RunTest :echom RunTestUnderCursor()
 command! RunTests :echom RunTestInFile()
 command! ReloadConfig source ~/.config/nvim/init.vim
-command! BuildTags !ctags -R shareforce db site-packages custom
+command! BuildTags !ctags -R --languages=python --fields=+n $VIRTUAL_ENV . 
 command! UndoMigrations :echom LoadReverseMigrationCommands()
 
 

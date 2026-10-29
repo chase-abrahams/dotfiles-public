@@ -57,10 +57,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " PEP 8 style guide
     Plug 'cburroughs/pep8.py'
     Plug 'vim-scripts/pep8'
-    " Waka time monitoring
-    Plug 'wakatime/vim-wakatime'
     " Pathfinder to give tips
     Plug 'danth/pathfinder.vim'
+    Plug 'sainnhe/gruvbox-material'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'greggh/claude-code.nvim'
 
 call plug#end()
 

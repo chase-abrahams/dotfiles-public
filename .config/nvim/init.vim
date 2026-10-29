@@ -20,6 +20,7 @@ source $HOME/.config/nvim/plug-config/better-whitespace.vim
 source $HOME/.config/nvim/plug-config/black.vim
 source $HOME/.config/nvim/plug-config/bracey.vim
 source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/plug-config/claude.vim
 source $HOME/.config/nvim/plug-config/python3-provider.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/tagalong.vim
@@ -29,3 +30,6 @@ source $HOME/.config/nvim/plug-config/vim-latex.vim
 
 " Messages
 source $HOME/.config/nvim/messages.vim
+
+" Color scheme
+colorscheme gruvbox-material
